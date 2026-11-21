@@ -1,0 +1,34 @@
+# Your job-apply settings. Setup fills this in; you can also edit it by hand.
+
+search:
+  roles: []                 # e.g. ["Flutter Developer", "Mobile Engineer"]
+  seniority: []             # e.g. [mid, senior]
+  locations: []             # e.g. ["Lahore", "Dubai"]
+  work_modes: []            # remote, hybrid, onsite
+  regions: []               # global, gcc, sa, eu, uk, na, apac
+  exclude_keywords: ["unpaid", "commission only"]
+  blocklist_companies: []   # e.g. your current employer
+
+platforms:
+  enabled: [linkedin]       # jobs are searched on LinkedIn only
+  settings: {}
+
+limits:
+  daily_cap: 10             # applications per day (LinkedIn: keep it low)
+  per_company_per_30_days: 2
+  reapply_after_days: 30    # same job reposted after this many days may be applied to again
+  low_fit_recheck_days: 14  # a job skipped for low fit is not re-scored before this
+  min_fit_score: 65
+
+workers:
+  max_total: 1              # one browser (your Chrome), one application at a time
+  per_company: 1
+  pause_between_submits_sec: [20, 60]
+
+resume:
+  include_photo: false
+  template: default
+
+dry_run: false              # true = fill everything but never click the final Submit
+ask_for_help: true          # true = when a CAPTCHA, login or unknown question appears, ask you
+                            # in chat and wait for "go"; false = leave that job on the manual list

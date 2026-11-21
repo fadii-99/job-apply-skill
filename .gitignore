@@ -1,0 +1,7 @@
+# Never publish secrets. The skill's own credential lives in ~/.job-apply/.env, not here.
+.env
+.env.*
+
+# Python build artefacts
+__pycache__/
+*.pyc

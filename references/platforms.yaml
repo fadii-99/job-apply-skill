@@ -1,0 +1,16 @@
+# Where jobs come from. LinkedIn only: the skill searches LinkedIn and nothing else.
+#
+# A LinkedIn job is applied to wherever its button leads:
+#   - "Easy Apply"            → LinkedIn's own form
+#   - "Apply" (external link) → the company's website (Greenhouse, Lever, Ashby, Workable,
+#                                its own careers page...). Hints: sites/careers-pages.md
+#   - only an email address   → sent from the user's Gmail (references/email-guide.md)
+# Every job keeps platform "linkedin" in the tracker, whichever way it is applied to.
+#
+# The tracker reads this file for the worker limit. The daily limit is limits.daily_cap in
+# config.yaml (an older config may also have platforms.settings.linkedin.daily_cap).
+
+platforms:
+  - {id: linkedin, name: LinkedIn, start_url: "https://www.linkedin.com/jobs/", search: true,
+     login_required: true, max_workers: 1, hints: linkedin.md,
+     risk_note: "LinkedIn's terms prohibit automated access; the account can be restricted. Keep the daily limit low."}
